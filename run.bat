@@ -32,7 +32,7 @@ CD C:\%WS_DIR%
 git clone https://github.com/%GITHUB_ACCOUNT%/%REPO_NAME%.git
 CD %REPO_NAME%
 SLEEP 2
-CALL mvn package
+CALL mvn package -Dbuild.version="1.1"
 ECHO.
 ECHO Executing Java program ...
 java -jar C:\%WS_DIR%\%REPO_NAME%\target\%REPO_NAME%-%APP_VERSION%-jar-with-dependencies.jar
